@@ -9,7 +9,7 @@ body {
 /* ===== Header ===== */
 header {
     text-align: center;
-    background-color: #1e3a8a;
+    background-color: #4c1d95;
     color: white;
     padding: 20px;
 }
@@ -40,7 +40,7 @@ nav ul li a {
 /* Hover effect */
 nav ul li a:hover {
     background-color: white;
-    color: #1e3a8a;
+    color: #6d28d9;
 }
 
 /* ===== Main Sections ===== */
@@ -62,7 +62,7 @@ section h2 {
 footer {
     text-align: center;
     font-size: 0.8rem;
-    background-color: #1e3a8a;
+    background-color: #4c1d95;
     color: white;
     padding: 15px;
 }
