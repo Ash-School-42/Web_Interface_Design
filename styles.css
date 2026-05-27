@@ -1,4 +1,5 @@
 /* ===== Page Background & Font ===== */
+
 body {
     background: linear-gradient(to right, #dbeafe, #eff6ff);
     font-family: Arial, Helvetica, sans-serif;
@@ -7,6 +8,7 @@ body {
 }
 
 /* ===== Header ===== */
+
 header {
     text-align: center;
     background-color: #4c1d95;
@@ -21,6 +23,7 @@ header h1 {
 }
 
 /* ===== Navigation Menu ===== */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -35,31 +38,86 @@ nav ul li a {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
+
+    /* Smooth hover transition */
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
 }
 
 /* Hover effect */
+
 nav ul li a:hover {
     background-color: #ffd700;
     color: #4c1d95;
 }
-}
 
 /* ===== Main Sections ===== */
+
 section {
     background-color: white;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+
+    /* Smooth zoom effect */
+    transition: transform 0.3s ease;
 }
 
-/* Section headings */
+/* Section Hover */
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Section Headings */
+
 section h2 {
     color: #ffd700;
 }
 
+/* ===== Table Styling ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 12px;
+    text-align: center;
+}
+
+thead {
+    background-color: #4c1d95;
+    color: white;
+}
+
+tfoot {
+    background-color: #ede9fe;
+    font-style: italic;
+}
+
+/* ===== Images ===== */
+
+img {
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+}
+
 /* ===== Footer ===== */
+
 footer {
     text-align: center;
     font-size: 0.8rem;
