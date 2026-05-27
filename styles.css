@@ -39,8 +39,9 @@ nav ul li a {
 
 /* Hover effect */
 nav ul li a:hover {
-    background-color: white;
-    color: #ffffff;
+    background-color: #ffd700;
+    color: #4c1d95;
+}
 }
 
 /* ===== Main Sections ===== */
