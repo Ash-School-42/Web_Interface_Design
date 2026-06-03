@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* ===== Header ===== */
+/* ===== HEADER FLEXBOX ===== */
 
 header {
     text-align: center;
@@ -16,21 +16,17 @@ header {
     padding: 20px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* ===== Navigation Menu ===== */
+/* ===== NAV FLEXBOX ===== */
 
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
     padding: 0;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -38,20 +34,23 @@ nav ul li a {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-
-    /* Smooth hover transition */
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* Hover effect */
 
 nav ul li a:hover {
     background-color: #ffd700;
     color: #4c1d95;
 }
 
-/* ===== Main Sections ===== */
+/* ===== MAIN FLEXBOX ===== */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== SECTIONS ===== */
 
 section {
     background-color: white;
@@ -60,24 +59,18 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-
-    /* Smooth zoom effect */
     transition: transform 0.3s ease;
 }
-
-/* Section Hover */
 
 section:hover {
     transform: scale(1.02);
 }
 
-/* Section Headings */
-
 section h2 {
-    color: #ffd700;
+    color: #4c1d95;
 }
 
-/* ===== Table Styling ===== */
+/* ===== TABLE ===== */
 
 table {
     width: 100%;
@@ -91,8 +84,7 @@ caption {
     margin-bottom: 10px;
 }
 
-th,
-td {
+th, td {
     border: 1px solid #999;
     padding: 12px;
     text-align: center;
@@ -108,7 +100,7 @@ tfoot {
     font-style: italic;
 }
 
-/* ===== Images ===== */
+/* ===== IMAGES ===== */
 
 img {
     border-radius: 5px;
@@ -116,7 +108,48 @@ img {
     height: 150px;
 }
 
-/* ===== Footer ===== */
+/* ===== CONTACT FORM FLEXBOX ===== */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* ===== INPUT + TEXTAREA TRANSITION ===== */
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4c1d95;
+    outline: none;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+
+.submit-btn {
+    background-color: #4c1d95;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffd700;
+    color: #4c1d95;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
     text-align: center;
@@ -124,4 +157,37 @@ footer {
     background-color: #4c1d95;
     color: white;
     padding: 15px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* PHONE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        max-width: 500px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+    main {
+        max-width: 1100px;
+        margin: auto;
+    }
 }
