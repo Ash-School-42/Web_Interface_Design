@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="description" content="Personal portfolio homepage showcasing projects and contact information.">
     <meta name="keywords" content="HTML, portfolio, web design, projects, contact">
@@ -10,144 +9,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Homepage</title>
-
-    <!-- Link to CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My Homepage!</h1>
+<header class="site-header">
+    <h1>Welcome to James Ash's Homepage!</h1>
 
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Main Content -->
-    <main>
+<main class="container">
 
-        <!-- About Section -->
-        <section id="about">
-            <header>
-                <h2>About</h2>
-            </header>
+    <section id="about" class="card">
+        <h2>About</h2>
+        <p>
+            Hello! Welcome to my personal homepage. Here you can learn more
+            about my creative projects, web development work, and hobbies.
+        </p>
+    </section>
 
-            <p>
-                Hello! Welcome to my personal homepage. Here you can learn more
-                about my creative projects, web development work, and hobbies.
-            </p>
-        </section>
+    <section id="projects" class="card">
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <header>
-                <h2>Projects</h2>
-            </header>
+        <h2>Projects</h2>
+        <p>Here are some projects and creative concepts I have worked on.</p>
 
-            <p>
-                Here are some projects and creative concepts I have worked on.
-            </p>
+        <table class="project-table">
+            <caption>Creative Project Showcase</caption>
 
-            <!-- Projects Table -->
-            <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Preview</th>
+                </tr>
+            </thead>
 
-                <caption>Creative Project Showcase</caption>
+            <tbody>
 
-                <colgroup>
-                    <col style="background-color: #f3e8ff;">
-                    <col>
-                    <col style="background-color: #fef3c7;">
-                </colgroup>
+                <tr>
+                    <td>D&amp;D Campaign Manager</td>
+                    <td>
+                        A custom web application designed to organize characters, quests, maps, and encounters for tabletop RPG campaigns.
+                    </td>
+                    <td>
+                        <div class="image-block dnd-block">
+                            D&D Campaign Manager
+                        </div>
+                    </td>
+                </tr>
 
-                <thead>
-                    <tr>
-                        <th>Project Name</th>
-                        <th>Description</th>
-                        <th>Image</th>
-                    </tr>
-                </thead>
+                <tr>
+                    <td>Bong Rips with Bob</td>
+                    <td>
+                        A concept homepage and media hub for a comedy discussion web show.
+                    </td>
+                    <td>
+                        <div class="image-block bob-block">
+                            Bong Rips with Bob
+                        </div>
+                    </td>
+                </tr>
 
-                <tbody>
+            </tbody>
 
-                    <tr>
-                        <td>D&amp;D Campaign Manager</td>
-                        <td>
-                            A custom web application designed to organize
-                            characters, quests, maps, and encounters for tabletop RPG campaigns.
-                        </td>
-                        <td>
-                            <img src="https://via.placeholder.com/150" alt="D&D Campaign Manager Placeholder">
-                        </td>
-                    </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="3">End of creative project examples</td>
+                </tr>
+            </tfoot>
 
-                    <tr>
-                        <td>Bong Rips with Bob</td>
-                        <td>
-                            A concept homepage and media hub for a comedy discussion web show.
-                        </td>
-                        <td>
-                            <img src="https://via.placeholder.com/150" alt="Bong Rips with Bob Placeholder">
-                        </td>
-                    </tr>
+        </table>
 
-                </tbody>
+    </section>
 
-                <tfoot>
-                    <tr>
-                        <td colspan="3">End of creative project examples</td>
-                    </tr>
-                </tfoot>
+    <section id="contact" class="card">
 
-            </table>
-        </section>
+        <h2>Contact</h2>
 
-        <!-- Contact Section -->
-        <section id="contact">
+        <p>
+            Feel free to reach out through email or social media for collaboration opportunities or questions.
+        </p>
 
-            <header>
-                <h2>Contact</h2>
-            </header>
+        <form class="contact-form">
 
-            <p>
-                Feel free to reach out through email or social media for collaboration opportunities or questions.
-            </p>
+            <label for="name">Name *</label>
+            <input type="text" id="name" required>
 
-            <!-- CONTACT FORM -->
-            <form class="contact-form">
+            <label for="email">Email *</label>
+            <input type="email" id="email" required>
 
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject">
 
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" rows="5"></textarea>
 
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
+            <input type="submit" value="Send Message" class="submit-btn">
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+        </form>
 
-                <input type="submit" value="Send Message" class="submit-btn">
+    </section>
 
-            </form>
+</main>
 
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 James Ash. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 James Ash. All rights reserved.</p>
+</footer>
 
 </body>
-
 </html>
