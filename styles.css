@@ -191,3 +191,27 @@ footer {
         margin: auto;
     }
 }
+
+/* ===== PROJECT PREVIEW BLOCKS ===== */
+
+.image-block {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* D&D Project block */
+.dnd-block {
+    background-color: #4c1d95; /* matches your header purple */
+}
+
+/* Bob project block */
+.bob-block {
+    background-color: #16a34a; /* green accent */
+}
